@@ -1,1 +1,12 @@
-{}
+{
+  "articulo": {
+    "attributes": {
+      "titulo": {
+        "appearance": ""
+      },
+      "contenido": {
+        "appearance": ""
+      }
+    }
+  }
+}

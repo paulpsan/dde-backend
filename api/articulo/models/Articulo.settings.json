@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "articulo",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "contenido": {
+      "type": "text"
+    },
+    "user": {
+      "model": "user",
+      "via": "articulos",
+      "plugin": "users-permissions"
+    }
+  }
+}
