@@ -42,6 +42,10 @@
     "articulos": {
       "collection": "articulo",
       "via": "user"
+    },
+    "eventos": {
+      "collection": "evento",
+      "via": "user"
     }
   }
 }

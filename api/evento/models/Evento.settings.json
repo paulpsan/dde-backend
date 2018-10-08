@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "evento",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "inicio": {
+      "type": "date"
+    },
+    "fin": {
+      "type": "date"
+    },
+    "user": {
+      "model": "user",
+      "via": "eventos",
+      "plugin": "users-permissions"
+    }
+  }
+}
