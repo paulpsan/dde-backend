@@ -20,8 +20,10 @@
   },
   "dependencies": {
     "lodash": "4.x.x",
+    "socket.io": "^2.1.1",
     "strapi": "3.0.0-alpha.13.1",
-    "strapi-hook-mongoose": "3.0.0-alpha.13.1"
+    "strapi-hook-mongoose": "3.0.0-alpha.13.1",
+    "uuid": "^3.3.2"
   },
   "author": {
     "name": "claudio",
