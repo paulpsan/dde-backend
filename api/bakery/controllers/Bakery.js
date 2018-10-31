@@ -53,7 +53,13 @@ module.exports = {
    */
 
   create: async (ctx) => {
-    return strapi.services.bakery.add(ctx.request.body);
+    console.log(ctx.request.body);
+    const data = strapi.services.bakery.add(ctx.request.body);
+
+    // Send 201 `created`
+    ctx.created(data);
+
+    strapi.emitToAllUsers(ctx.request.body);
   },
 
   /**

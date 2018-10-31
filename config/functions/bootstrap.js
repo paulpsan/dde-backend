@@ -16,10 +16,11 @@ module.exports = cb => {
   io.on('connection', socket => {
     socket.user_id = uuidv4();
     users.push(socket);
+    console.log(`User ${socket.user_id} connected`);
 
     // send message on user connection
-    socket.emit('hello', JSON.stringify({
-      message: 'Hello food lover!'
+    socket.emit('ready', JSON.stringify({
+      message: 'Hello visitant!'
     }));
 
     socket.on('disconnect', () => {
@@ -31,7 +32,10 @@ module.exports = cb => {
   })
 
   strapi.io = io; // register socket io inside strapi main object to use it globally anywhere
-  strapi.emitToAllUsers = food => io.emit('food_ready', food);
+  strapi.emitToAllUsers = (food) => {
+    console.log(food);
+    io.emit('food_ready', food)
+  };
 
   cb();
 };

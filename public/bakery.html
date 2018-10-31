@@ -27,7 +27,7 @@
         </label>
         <button id="add">Add</button>
     </section>
-
+    <div id="food"></div>
     <!-- add socket.io script -->
     <script src="/socket.io/socket.io.js"></script>
     <script>
@@ -41,6 +41,10 @@
         // to listen to click event and send our request
         const add = document.getElementById('add');
 
+        const food = document.getElementById('food');
+        
+        socket.on('food_ready', res => food.innerHTML += `<div>- ${res.name} is ${res.rating}/5 so delicious</div>`);
+
         add.addEventListener('click', () => {
             fetch('bakery', {
                 method: 'post',
@@ -53,6 +57,7 @@
                 res.json().then(data => console.log(data));
             }).catch(err => console.log('Fetch error :-S', err));
         });
+        
     </script>
 </body>
 
