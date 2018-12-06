@@ -42,7 +42,7 @@ node {
     "uuid": "f97ff4cb-331d-42ab-863a-188bff263d6f"
   },
   "engines": {
-    "node": "= 10.6.0",
+    "node": ">= 10.6.0",
     "npm": ">= 5.0.0"
   },
   "license": "MIT"
